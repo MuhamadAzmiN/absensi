@@ -18,10 +18,11 @@ if(isset($_COOKIE['id']) && isset($_COOKIE['key'])){
         $_SESSION["login"] = true;
     }
 }
-if (isset($_SESSION["login"])) {
-    header("Location: index.php");
-    exit;
-}
+// ini kalau di aktifin aneh
+// if (isset($_SESSION["login"])) {
+//     header("Location: index.php");
+//     exit;
+// }
 
 
 
@@ -143,27 +144,28 @@ if (isset($_POST["submit"])) {
                         <input class="input" name="password" type="password">
                     </div>
                 </div>
-                <div class="input-div two">
-                        <label for="remember">remember</label>
-                        <input type="checkbox" name="remember">
-                </div>
                 <div class="terms">
-                    <input type="checkbox">
-                    <label>Li e concordo com os </label><a id="action-modal">termos de uso.</a>
+                        <input type="checkbox" name="remember">
+                        <label>Remember Me</label><a id="action-modal">Info</a>
                 </div>
+                
                 <div class="btn-container">
                     <button type="submit" name="submit" class="btn-action">Login</button>
                 </div>
                 <div class="account">
+                    <p>Forget Password</p>
+                    <a href="forgotPassword.php">Lupa password?</a>
+                </div>
+                <div class="account">
                     <p>Já possui conta ?</p>
-                    <a href="register.php">Register?</a>
+                    <a href="register.php">Sign Up</a>
                 </div>
                 <!-- The Modal -->
                 <div id="modal-terms" class="modal">
                     <!-- Modal content -->
                     <div class="modal-content">
                         <span class="close">&times;</span>
-                        <h2>Termos e serviços</h2>
+                        <h2>Muhamad Azmi Naziyulloh</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore magna aliqua. Iaculis at erat pellentesque adipiscing commodo. Adipiscing
                             at in tellus integer feugiat scelerisque. Duis at consectetur lorem donec massa. Lacus vel

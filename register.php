@@ -60,6 +60,13 @@ if(isset($_POST["submit"])){
                     unset($_SESSION["regis"]);
                 endif;
                 ?>
+                <?php
+                if(isset($_SESSION["email"]) && $_SESSION["email"] == true):
+                    echo "<p>Email anda sudah digunakan<p>";
+                    unset($_SESSION["email"]);
+
+                endif;
+                ?>
 
                 <div class="input-div one">
                     <div class="i">
